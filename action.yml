@@ -1,6 +1,9 @@
 name: 'Wait'
 description: 'Wait a designated number of milliseconds'
 inputs:
+  asana-secret:
+    description: 'asana pat'
+    required:  true
   milliseconds:  # id of input
     description: 'number of milliseconds to wait'
     required: true
