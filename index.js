@@ -1,13 +1,20 @@
+console.log('ASANA_SECRET 3');
 const core = require('@actions/core');
+console.log('ASANA_SECRET 4');
 const asana = require('asana');
+console.log('ASANA_SECRET 5');
 const wait = require('./wait');
 
 
 // most @actions toolkit packages have async methods
 async function run() {
+    console.log('ASANA_SECRET 2');
   try {
-    const ASANA_SECRET = core.getInput('asana-secret')
-
+    console.log('ASANA_SECRET 1');
+    const ASANA_SECRET = core.getInput('asana-secret');
+    console.log('ASANA_SECRET');
+    console.log(ASANA_SECRET);
+    console.log('ASANA_SECRET-----------------');
     const client = asana.Client.create().useAccessToken(ASANA_SECRET);
     client.users.me().then(function (me) {
       console.log(me);
